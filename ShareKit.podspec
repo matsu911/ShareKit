@@ -87,11 +87,11 @@ Pod::Spec.new do |s|
     diigo.dependency 'ShareKit/Core'
   end
 
-  s.subspec 'Dropbox' do |dropbox|
-    dropbox.source_files = 'Classes/ShareKit/Sharers/Services/Dropbox/**/*.{h,m}'
-    dropbox.dependency 'ShareKit/Core'
-    dropbox.dependency 'Dropbox-iOS-SDK', '~> 1.3.13'
-  end
+  # s.subspec 'Dropbox' do |dropbox|
+  #   dropbox.source_files = 'Classes/ShareKit/Sharers/Services/Dropbox/**/*.{h,m}'
+  #   dropbox.dependency 'ShareKit/Core'
+  #   dropbox.dependency 'Dropbox-iOS-SDK', '~> 1.3.13'
+  # end
 
   s.subspec 'Instapaper' do |instapaper|
     instapaper.source_files = 'Classes/ShareKit/Sharers/Services/Instapaper/**/*.{h,m}'
