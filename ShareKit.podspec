@@ -30,16 +30,16 @@ Pod::Spec.new do |s|
     reachability.requires_arc = false
   end
 
-s.subspec 'Evernote' do |evernote|
+  s.subspec 'Evernote' do |evernote|
     evernote.source_files = 'Classes/ShareKit/Sharers/Services/Evernote/**/*.{h,m}'
     evernote.dependency 'Evernote-SDK-iOS', '~> 1.3.1'
     evernote.dependency 'ShareKit/Core'
     evernote.libraries = 'xml2'
-evernote.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+    evernote.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
   end
 
   s.subspec 'Facebook' do |facebook|
-    facebook.source_files   = 'Classes/ShareKit/Sharers/Services/Facebook/**/*.{h,m}'
+    facebook.source_files = 'Classes/ShareKit/Sharers/Services/Facebook/**/*.{h,m}'
     facebook.dependency 'Facebook-iOS-SDK', '~> 3.0'
     facebook.dependency 'ShareKit/Core'
   end
@@ -71,12 +71,12 @@ evernote.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' 
     kippt.dependency 'ShareKit/Core'
   end
 
-   s.subspec 'Plurk' do |plurk|
+  s.subspec 'Plurk' do |plurk|
     plurk.source_files = 'Classes/ShareKit/Sharers/Services/Plurk/**/*.{h,m}'
     plurk.dependency 'ShareKit/Core'
   end
 
-   s.subspec 'Pocket' do |pocket|
+  s.subspec 'Pocket' do |pocket|
     pocket.source_files = 'Classes/ShareKit/Sharers/Services/Pocket/**/*.{h,m}'
     pocket.dependency 'ShareKit/Core'
     pocket.dependency 'PocketAPI', '~> 1.0.2'
@@ -124,7 +124,7 @@ evernote.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' 
     twitter.dependency 'ShareKit/Core'
   end
 
- s.subspec 'SinaWeibo' do |sinaweibo|
+  s.subspec 'SinaWeibo' do |sinaweibo|
     sinaweibo.source_files = 'Classes/ShareKit/Sharers/Services/Sina Weibo/**/*.{h,m}'
     sinaweibo.dependency 'ShareKit/Core'
     sinaweibo.framework = 'Social'
@@ -152,32 +152,32 @@ evernote.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' 
   #end
 
   s.subspec 'WhatsApp' do |whatsapp|
-      whatsapp.source_files = 'Classes/ShareKit/Sharers/Services/WhatsApp/**/*.{h,m}'
-      whatsapp.dependency 'ShareKit/Core'
+    whatsapp.source_files = 'Classes/ShareKit/Sharers/Services/WhatsApp/**/*.{h,m}'
+    whatsapp.dependency 'ShareKit/Core'
   end
 
   s.subspec 'OneNote' do |onenote|
-   onenote.source_files = 'Classes/ShareKit/Sharers/Services/OneNote/**/*.{h,m}'
-   onenote.dependency 'ShareKit/Core'
-   onenote.dependency 'ISO8601DateFormatter'
-   onenote.dependency 'LiveSDK'
+    onenote.source_files = 'Classes/ShareKit/Sharers/Services/OneNote/**/*.{h,m}'
+    onenote.dependency 'ShareKit/Core'
+    onenote.dependency 'ISO8601DateFormatter'
+    onenote.dependency 'LiveSDK'
   end
 
-  s.subspec 'YouTube' do |youtube|
-    youtube.source_files = 'Classes/ShareKit/Sharers/Services/YouTube/**/*.{h,m}'
-    youtube.dependency 'ShareKit/Core'
-    youtube.dependency 'Google-API-Client/YouTube'
-  end
+  # s.subspec 'YouTube' do |youtube|
+  #   youtube.source_files = 'Classes/ShareKit/Sharers/Services/YouTube/**/*.{h,m}'
+  #   youtube.dependency 'ShareKit/Core'
+  #   youtube.dependency 'Google-API-Client/YouTube'
+  # end
 
-  s.subspec 'GooglePlus' do |googleplus|
-    googleplus.source_files = 'Classes/ShareKit/Sharers/Services/Google Plus/**/*.{h,m}'
-    googleplus.vendored_frameworks = 'Frameworks/GooglePlus.framework'
-    googleplus.resource = "Frameworks/GooglePlus.bundle"
-    googleplus.framework = 'AssetsLibrary', 'CoreLocation', 'CoreMotion', 'CoreGraphics', 'CoreText', 'MediaPlayer', 'Security', 'SystemConfiguration', 'AddressBook'
-    googleplus.dependency 'ShareKit/Core'
-    googleplus.dependency 'Google-API-Client/Plus'
-    googleplus.dependency 'OpenInChrome'
-    googleplus.dependency 'gtm-logger'
-    end
+  # s.subspec 'GooglePlus' do |googleplus|
+  #   googleplus.source_files = 'Classes/ShareKit/Sharers/Services/Google Plus/**/*.{h,m}'
+  #   googleplus.vendored_frameworks = 'Frameworks/GooglePlus.framework'
+  #   googleplus.resource = "Frameworks/GooglePlus.bundle"
+  #   googleplus.framework = 'AssetsLibrary', 'CoreLocation', 'CoreMotion', 'CoreGraphics', 'CoreText', 'MediaPlayer', 'Security', 'SystemConfiguration', 'AddressBook'
+  #   googleplus.dependency 'ShareKit/Core'
+  #   googleplus.dependency 'Google-API-Client/Plus'
+  #   googleplus.dependency 'OpenInChrome'
+  #   googleplus.dependency 'gtm-logger'
+  # end
 
 end
